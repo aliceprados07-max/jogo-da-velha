@@ -1,5 +1,94 @@
-.square{
-  font-size: medium;
-  color: blue;
-  
+/* ====== Reset básico ====== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #121212; /* Fundo escuro */
+  color: #f5f5f5; /* Texto claro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Centraliza verticalmente */
+}
+
+/* ====== Container principal do jogo ====== */
+.game {
+  display: flex;
+  flex-direction: row; /* Tabuleiro de um lado e histórico do outro */
+  gap: 30px;
+}
+
+/* ====== Área do tabuleiro ====== */
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ====== Status (mensagem de vez ou vencedor) ====== */
+.status {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #00d4ff;
+  text-shadow: 0 0 5px #00d4ff;
+}
+
+/* ====== Quadradinhos (botões) ====== */
+.square {
+  background: #1f1f1f;
+  border: 2px solid #00d4ff;
+  float: left;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 60px;
+  height: 60px;
+  width: 60px;
+  margin: 2px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.square:hover {
+  background: #00d4ff;
+  color: #121212;
+}
+
+/* ====== Histórico de movimentos ====== */
+.game-info {
+  background: #1f1f1f;
+  border-radius: 10px;
+  padding: 15px;
+  min-width: 200px;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+
+.game-info ol {
+  padding-left: 20px;
+}
+
+.game-info button {
+  background: #00d4ff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin: 5px 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.game-info button:hover {
+  background: #00aacc;
+  color: #fff;
+}
+
+/* ====== Mensagem de alerta extra (caso for usar) ====== */
+#alertaP {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff5555;
 }
